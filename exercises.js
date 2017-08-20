@@ -284,7 +284,14 @@ var sumAllPositive = function (str){
  * @param {Array}
  * @return {Number}
  */
-var stringCountBelowThree;
+var stringCountBelowThree = function (arr){
+  threeChar = 0;
+  for (var i=0; i<arr.length; i++){
+    if (arr[i].length <= 3){
+      threeChar +=1;
+    }
+  }return threeChar;
+}
 
 /* #countObjects
  *
@@ -293,7 +300,13 @@ var stringCountBelowThree;
  * @param {Array}
  * @return {Number}
  */
-var countObjects;
+var countObjects = function (arr){
+  objCount = 0;
+  for (var key in arr){
+    objCount = arr.length;
+  }
+  return objCount;
+}
 
 /* #getObjectKeys
  *
@@ -302,7 +315,13 @@ var countObjects;
  * @param {Object}
  * @return {Array}
  */
-var getObjectKeys;
+var getObjectKeys = function (obj){
+  newArray = [];
+  for (var key in obj){
+    newArray.push(key);
+  }
+  return newArray;
+}
 
 /* #getObjectValues
  *
@@ -311,7 +330,13 @@ var getObjectKeys;
  * @param {Object}
  * @return {Array}
  */
-var getObjectValues;
+var getObjectValues = function (obj){
+  newArray = [];
+  for (var key in obj){
+    newArray.push(obj[key]);
+  }
+  return newArray;
+}
 
 /* #makeObject
  *
@@ -507,10 +532,10 @@ module.exports = {
   multiplyAll: multiplyAll,
   getKeys: getKeys,
   sumAllPositive: sumAllPositive,
-  stringCountBelowThree: null,
-  countObjects: null,
-  getObjectKeys: null,
-  getObjectValues: null,
+  stringCountBelowThree: stringCountBelowThree,
+  countObjects: countObjects,
+  getObjectKeys: getObjectKeys,
+  getObjectValues: getObjectValues,
   makeObject: null,
   makeObjectReverse: null,
   tupleToObject: null,
