@@ -557,7 +557,7 @@ module.exports = {
   makeObject: makeObject,
   makeObjectReverse: makeObjectReverse,
   tupleToObject: tupleToObject,
-  tupleToObjectReverse: null,
+  tupleToObjectReverse: tupleToObjectReverse,
   strToKeys: null,
   getValues: null,
   getKeys: getKeys,
