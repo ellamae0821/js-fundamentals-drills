@@ -185,7 +185,12 @@ var splitString = function (str){
  * @param {String}
  * @return {Number}
  */
-var lengthOfLast;
+var lengthOfLast = function (arr){
+  howManyStrLast = 0;
+  var popped = arr.pop(howManyStrLast);
+  var splitted = popped.split("");
+  return splitted.length;
+}
 
 /* #sumBelowTen
  *
@@ -194,7 +199,14 @@ var lengthOfLast;
  * @param {Array}
  * @return {Number}
  */
-var sumBelowTen;
+var sumBelowTen = function (arr){
+  sumBelTen = 0;
+  for (var i=0; i<arr.length; i++){
+    if (arr[i] <10){
+      sumBelTen += arr[i];
+    }
+  }return sumBelTen;
+}
 
 /* #moreThanTenLetters
  *
@@ -203,7 +215,14 @@ var sumBelowTen;
  * @param {String}
  * @return {Number}
  */
-var moreThanTenLetters;
+var moreThanTenLetters = function (arr) {
+  totalElem = 0;
+  for (var i=0; i<arr.length; i++){
+    if (arr[i].length >10){
+      totalElem.push(arr[i]);
+    }
+  }return totalElem;
+}
 
 /* #multiplyAll
  *
@@ -456,9 +475,9 @@ module.exports = {
   createZeroFilledArray: createZeroFilledArray,
   poppedArray: poppedArray,
   splitString: splitString,
-  lengthOfLast: null,
-  sumBelowTen: null,
-  moreThanTenLetters: null,
+  lengthOfLast: lengthOfLast,
+  sumBelowTen: sumBelowTen,
+  moreThanTenLetters: moreThanTenLetters,
   multiplyAll: null,
   getKeys: null,
   sumAllPositive: null,
